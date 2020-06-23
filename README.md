@@ -29,10 +29,10 @@ Instalación
 		    
 	- Windows [Descargar Git](https://git-scm.com/downloads)
 
-- Desde la terminal vaya a la ubicacion en donde desea tener el proyecto, y clonelo con `git clone https://github.com/valva-ro/listaPeliculas-TP4` 
+- Desde la terminal vaya a la ubicacion en donde desea tener el proyecto, y clonelo con `git clone https://github.com/valva-ro/TP4-recomendacionPelicula` 
 
 Contribución
 ----------
 
-- [Issue Tracker](https://github.com/valva-ro/listaPeliculas-TP4/issues)
-- [Source Code](https://github.com/valva-ro/listaPeliculas-TP4)
+- [Issue Tracker](https://github.com/valva-ro/TP4-recomendacionPelicula/issues)
+- [Source Code](https://github.com/valva-ro/TP4-recomendacionPelicula)
