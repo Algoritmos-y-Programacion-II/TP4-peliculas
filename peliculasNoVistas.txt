@@ -1,0 +1,65 @@
+Harry_Potter_y_la_orden_del_fenix
+Fantastico
+8
+David Yates
+Daniel_Radcliffe Emma_Watson Rupert_Grint Ralph_Fiennes Tom_Felton Gary_Oldman Michael_Gambon Imelda_Staunton Natalia_Tena Helena_Bonham Alan_Rickman Maggie_Smith Robbie_Coltrane
+Harry_Potter_y_el_principe_mestizo
+Fantastico
+7
+David Yates
+Daniel_Radcliffe Emma_Watson Rupert_Grint Ralph_Fiennes Tom_Felton David_Thewlis Michael_Gambon Natalia_Tena Helena_Bonham Alan_Rickman Maggie_Smith Robbie_Coltrane
+Harry_Potter_y_las_reliquias_de_la_muerte_parte_1
+Fantastico
+8
+David Yates
+Daniel_Radcliffe Emma_Watson Rupert_Grint Ralph_Fiennes Tom_Felton David_Thewlis Imelda_Staunton Natalia_Tena Helena_Bonham Alan_Rickman Maggie_Smith Robbie_Coltrane
+Harry_Potter_y_las_reliquias_de_la_muerte_parte_2
+Fantastico
+7
+David Yates
+Daniel_Radcliffe Emma_Watson Rupert_Grint Ralph_Fiennes Tom_Felton Michael_Gambon David_Thewlis Imelda_Staunton Natalia_Tena Helena_Bonham Alan_Rickman Maggie_Smith Robbie_Coltrane
+El_circulo
+5
+Ciencia_Ficcion
+James Ponsoldt
+Emma_Watson Tom_Hanks John_Boyega Karen_Gillan
+La_Bella_y_la_Bestia
+Fantastico
+6
+Bill Condon
+Emma_Watson Dan_Stevens Luke_Evans Kevin_Cline Josh_Gad Ewan_McGregor Ian_McKellen Kevin_Kline
+El_Hombre_Araña
+Accion
+5
+Sam Raimi
+Tobey_Maguire Kristen_Dunst James_Franco Willem_Dafoe Rosemary_Harris Stan_Lee
+El_Hombre_Araña_2
+Accion
+6
+Sam Raimi
+Tobey_Maguire Kristen_Dunst James_Franco Alfred_Molina Rosemary_Harris Stan_Lee
+Los_vengadores
+Accion
+8
+Joss Whedon
+Chris_Evans Scarlett_Johansson Robert_Downey_Jr Chris_Hemsworth Mark_Ruffalo Jeremy_Renner Tom_Hiddleston Samuel_Jackson Stan_Lee
+Escape_Imposible
+Accion
+6
+Mikael Hafstrom
+Sylvester_Stallone 50_Cent Arnold_Schwarzenegger Jim_Caviezel
+Click
+Comedia
+5
+Frank Coraci
+Adam_Sandler Kate_Beckinsale Chirstopher_Walken David_Hasselhoff
+12_Horas_para_sobrevivir
+Terror
+7
+James DeMonaco
+Frank_Grillo Carmen_Ejogo Zach_Gilford Kiele_Sanchez Michael_Williams Zoe_Soul
+It
+Terror
+7
+Andres Muschietti
+Finn_Wolfhard Bill_Skarsgard Jaeden_Martell Sophia_Lillis Jack_Grazer Wyatt_Oleff Jeremy_Taylor Chosen_Jacobs Jackson_Scott
