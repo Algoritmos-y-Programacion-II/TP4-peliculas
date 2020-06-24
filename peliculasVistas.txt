@@ -1,0 +1,40 @@
+Harry_Potter_y_la_piedra_filosofal
+Fantastico
+7
+Chris Colombus
+Daniel_Radcliffe Emma_Watson Rupert_Grint Tom_Felton Richard_Harris Alan_Rickman Maggie_Smith Robbie_Coltrane
+Harry_Potter_y_la_camara_secreta
+Fantastico
+8
+Chris Colombus
+Daniel_Radcliffe Emma_Watson Rupert_Grint Tom_Felton Richard_Harris Alan_Rickman Maggie_Smith Robbie_Coltrane
+Harry_Potter_y_el_prisionero_de_Azkaban
+Fantastico
+7
+Alfonso Cuaron
+Daniel_Radcliffe Emma_Watson Rupert_Grint Tom_Felton Gary_Oldman David_Thewlis Michael_Gambon Alan_Rickman Maggie_Smith Robbie_Coltrane
+Harry_Potter_y_el_caliz_de_fuego
+Fantastico
+7
+Mike Newell
+Daniel_Radcliffe Emma_Watson Rupert_Grint Robert_Pattinson Ralph_Fiennes Brendan_Gleeson Tom_Felton Gary_Oldman Michael_Gambon Alan_Rickman Maggie_Smith David_Tennant Robbie_Coltrane
+Capitan_America_el_primer_vengador
+Accion
+8
+Joe Jonhston
+Chirs_Evans Hayley_Atwell Sebastian_Stan Hugo_Weaving Dominic_Cooper Stan_Lee
+Capitan_America_y_el_soldado_del_invierno
+Accion
+8
+Joe Russo Anthony Russo
+Chirs_Evans Sebastian_Stan Anthony_Mackie Scarlett_Johansson Samuel_Jackson Stan_Lee
+Iron_Man_1
+Accion
+8
+Jon Favreau
+Robert_Downey_Jr Jon_Favreau Gwyneth_Paltrow Terrence_Howard Paul_Bettany Stan_Lee
+Como_si_fuera_la_primera_vez
+Romance
+7
+Peter Segal
+Adam_Sandler Drew_Barrymore Rob_Schneider Sean_Astin
