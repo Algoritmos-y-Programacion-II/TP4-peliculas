@@ -144,13 +144,4 @@ void Lista<Tipo>:: sacar(int posicion) {
     delete borrar;
     elementos--;
 }
-
-template <typename Tipo>
-void Lista<Tipo>:: mostrarDatosNodos() {
-    if (!vacia()) {
-        for (int i = 0; i < elementos; i++) {
-            obtenerNodo(i)->mostrarNodo();
-        }
-    }
-}
 #endif //TP4_RECOMENDACIONPELICULA_LISTA_H

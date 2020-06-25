@@ -78,11 +78,4 @@ Tipo Nodo<Tipo>:: obtenerDato() {
 }
 // -------------------->
 
-template <typename Tipo>
-void Nodo<Tipo>:: mostrarNodo() {
-    std::cout << "----------------------------------------------------------------\n";
-    std::cout << "Nodo ->   Dato: " << dato << "   Dirección: " << this << "   Siguiente: " << pSig << "\n";
-    std::cout << "----------------------------------------------------------------\n\n";
-}
-
 #endif //TP4_RECOMENDACIONPELICULA_NODO_H
