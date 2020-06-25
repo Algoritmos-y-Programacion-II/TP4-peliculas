@@ -47,10 +47,6 @@ public:
     // POST: Devuelve true si la lista esta vacia, de lo contrario false
     bool vacia();
 
-    // PRE: -
-    // POST: Muestra por pantalla los datos de todos los nodos
-    void mostrarDatosNodos();
-
 private:
     // PRE: 0 < posicion <= elementos
     // POST: Devuelve un puntero de tipo nodo correspondiente con la posicion
