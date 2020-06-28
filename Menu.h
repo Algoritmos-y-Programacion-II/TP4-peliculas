@@ -11,11 +11,11 @@ class Menu{
 
 private:
 
-Lista<string> ListaPV;
+Lista<Pelicula> peliculasVistas;
 
-Lista<string> ListaPNV;
+Lista<Pelicula> peliculasNoVistas;
 
-Lista<string> ListaPR;
+Lista<Pelicula> peliculasRecomendadas;
 
 int opcion;
 
@@ -28,10 +28,10 @@ void iterarListaPeliculasRecomendadas();
 public:
 
     //Constructor con parametro
-    //Pre-Condicion: El archivo debe existir y ser del tipo string, y debe existir una lista
+    //Pre-Condicion: Las listas deben existir
     //Post-Condicion: Se crea un objeto del tipo Menu
 
-    Menu(Lista<string> ListaPV,Lista<string> ListaPNV,Lista<string> ListaPR);
+    Menu(Lista<Pelicula> peliculasVistas,Lista<Pelicula> peliculasNoVistas,Lista<Pelicula> peliculasRecomendadas);
 
     //Mostrar las opciones que el usuario puede elegir
     //Pre-Condicion: Debe instanciarse un menu y pasar las listas por parametro

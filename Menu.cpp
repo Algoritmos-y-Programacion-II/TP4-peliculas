@@ -1,12 +1,11 @@
 #include <iostream>
 #include "Menu.h"
 
-Menu::Menu(Lista<string> ListaPV,Lista<string> ListaPNV,Lista<string> ListaPR) {
-
-
-    this->ListaPV = ListaPV;
-    this->ListaPNV = ListaPNV;
-    this->ListaPR = ListaPR;
+Menu::Menu(Lista<Pelicula> peliculasVistas, Lista<Pelicula> peliculasNoVistas, Lista<Pelicula> peliculasRecomendadas) {
+    
+    this->peliculasVistas = peliculasVistas;
+    this->peliculasNoVistas = peliculasNoVistas;
+    this->peliculasRecomendadas = peliculasRecomendadas;
     
 }
 
