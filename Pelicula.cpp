@@ -43,7 +43,7 @@ void Pelicula::cargarTitulo(string tituloRecibido){
     titulo = tituloRecibido;
 }
 
-void igualarListasActores(Lista* actoresRecibidos){
+void igualarListasActores(Lista<string> *actoresRecibidos){
     string actorAuxiliar;
     for(int i = 0; actoresRecibidos->obtenerCantidadElementos; i++){
         actorAuxiliar = actoresRecibidos->obtenerDato(i);
