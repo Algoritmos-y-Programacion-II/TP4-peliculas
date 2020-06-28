@@ -36,8 +36,8 @@ class Pelicula {
 
         // MODIFICADORES
 
-        //PRE:
-        //POST:
+        //PRE: RECIBE UN PUNTERO DE TIPO LISTA DE STRING.
+        //POST: NO DEVUELVE NADA. LE ASIGNA LOS VALORES DE LA LISTA RECIBIDA AL ATRIBUTO ACTORES
         void igualarListasActores(Lista<string> *actoresRecibidos);
 
     public:
