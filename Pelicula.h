@@ -82,7 +82,7 @@ class Pelicula {
 
         //PRE: NO RECIBE NADA.
         //POST: DEVUELVE UN PUNTERO DE TIPO LISTA, ESPECIFICAMENTE, DIRECCIONADO A LA LISTA ACTORES.
-        Lista* obtenerActores();
+        Lista<string> *obtenerActores();
 
         //PRE: NO RECIBE NADA.
         //POST: DEVUELVE EL STRING ALMACENADO EN EL ATRIBUTO GENERO.
