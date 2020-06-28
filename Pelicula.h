@@ -30,7 +30,7 @@ class Pelicula {
         string titulo;
         string director;
         int puntaje;
-        Lista actores;
+        Lista<string> actores;
 
         // METODOS
 
@@ -38,11 +38,7 @@ class Pelicula {
 
         //PRE:
         //POST:
-        void crearActores(Lista *&elencoIngresado);
-
-        //PRE:
-        //POST:
-        void igualarListasActores(Lista *actoresRecibidos);
+        void igualarListasActores(Lista<string> *actoresRecibidos);
 
     public:
 
