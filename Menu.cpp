@@ -2,7 +2,7 @@
 #include "Menu.h"
 
 Menu::Menu(Lista<Pelicula> peliculasVistas, Lista<Pelicula> peliculasNoVistas, Lista<Pelicula> peliculasRecomendadas) {
-    
+
     this->peliculasVistas = peliculasVistas;
     this->peliculasNoVistas = peliculasNoVistas;
     this->peliculasRecomendadas = peliculasRecomendadas;
@@ -29,7 +29,7 @@ void Menu::mostrarMenu(){
 
 }
 
-bool Menu::optionHandler() {
+bool Menu::SelectorDeOpciones() {
     
     switch (this->opcion) {
         case 1:{

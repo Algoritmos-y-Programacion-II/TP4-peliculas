@@ -43,7 +43,7 @@ public:
     //Pre-Condicion: Debe existir un objeto instanciado Menu y la opcion debe estar entre el rango 1 y el 3
     //Post-Condicion: procesa la opcion invocando las funciones correspondientes
 
-    bool optionHandler();
+    bool SelectorDeOpciones();
 
 };
 #endif //PELICULAS_MENU_H
