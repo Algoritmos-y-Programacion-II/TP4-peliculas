@@ -8,7 +8,7 @@
 #include "Lista.h"
 #include "Pelicula.h"
 
-const int puntajeValido = 7;
+const int PUNTAJE_VALIDO = 7;
 
 class PeliculasRecomendadas {
 
@@ -46,11 +46,6 @@ class PeliculasRecomendadas {
         //PRE: RECIBE UNA PUNTERO DE TIPO PELICULA Y UNA LISTA DE STRING PREVIAMENTE CARGADA.
         //POST: DEVUELVE TRUE SI EL ACTOR ESTA EN LA LISTA, FALSE DE LO CONTRARIO.
         bool actorEncontrado(Pelicula *peliculaNoVista, Lista<string> *actoresVistos);
-
-        //PRE: RECIBE UN STRING Y UN PUNTERO DE TIPO LISTA, DE TIPO STRING, PREVIAMENTE CARGADA.
-        //POST: DEVUELVE TRUE SI EL DATO ESTA EN LA LISTA, FALSE DE LO CONTRARIO.
-        bool datoEnLista(string actorVisto, Lista<string> *actoresVistos);
-
 
     public:
 
