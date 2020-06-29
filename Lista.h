@@ -43,8 +43,8 @@ public:
     // POST: Saca el elemento de la posicion recibida como parametro de la lista
     void sacar(int posicion);
 
-    // PRE:
-    // POST:
+    // PRE: El dato tiene que ser valido
+    // POST: Devuelve true si se encontro el dato en la lista, de lo contrario false
     bool datoEnLista(Tipo dato);
 
     // PRE: -
