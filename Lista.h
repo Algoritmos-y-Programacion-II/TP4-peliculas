@@ -142,11 +142,15 @@ void Lista<Tipo>:: sacar(int posicion) {
 
 template <typename Tipo>
 bool Lista<Tipo>:: datoEnLista(Tipo datoExterno) {
-    for (int i = 0; i < elementos; i++) {
-        if (obtenerDato(i) == datoExterno)
-            return true;
+    bool encontrado = false;
+    int i = 0;
+    while((i < elementos) && !encontrado){
+        if(datoExterno == obtenerDato(i)){
+            encontrado = true;
+        }
+        i++;
     }
-    return false;
+    return encontrado;
 }
 
 template <typename Tipo>
