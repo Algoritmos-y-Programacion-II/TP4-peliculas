@@ -94,11 +94,11 @@ void PeliculasRecomendadas::recomendarPeliculas(Lista<Pelicula> *peliculasVistas
         if( generosVistos->datoEnLista(generoLeido) ){
             string directorLeido = peliculaLeida.obtenerDirector();
             if( directoresVistos->datoEnLista(directorLeido) || actorEncontrado(&peliculaLeida, actoresVistos) ){
-                listaPeliculasRecomendadas.agregarAlFinal(peliculaNoVista);
+                listaPeliculasRecomendadas.agregarAlFinal(peliculaLeida);
             }
         }
         else if(peliculaLeida.obtenerPuntaje() >= PUNTAJE_VALIDO){
-            listaPeliculasRecomendadas.agregarAlFinal(peliculaNoVista);
+            listaPeliculasRecomendadas.agregarAlFinal(peliculaLeida);
         }
     }
 }
