@@ -17,7 +17,6 @@
 #define PELICULA_H
 
 #include "Lista.h"
-#include "Persona.h"
 
 using namespace std;
 
@@ -38,7 +37,7 @@ class Pelicula {
 
         //PRE: RECIBE UN PUNTERO DE TIPO LISTA DE STRING.
         //POST: NO DEVUELVE NADA. LE ASIGNA LOS VALORES DE LA LISTA RECIBIDA AL ATRIBUTO ACTORES
-        void igualarListasActores(Lista<string> *actoresRecibidos);
+        void igualarListasActores(Lista<string> actoresRecibidos);
 
     public:
 
@@ -52,7 +51,7 @@ class Pelicula {
 
         //PRE:
         //POST:
-        Pelicula(Pelicula otraPelicula);
+        Pelicula(const Pelicula &otraPelicula);
 
         // MODIFICADORES
 
