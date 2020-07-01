@@ -16,10 +16,6 @@ public:
     // POST: Construye un nodo con el dato recibido
     Nodo(Tipo datoExterno);
 
-    // PRE: El nodo debe estar creado
-    // POST: Libera la memoria del nodo
-    ~Nodo();
-
     // PRE: pSigExterno debe ser valido
     // POST: Le asigna pSigExterno a pSig
     void asignarSiguiente(Nodo* pSigExterno);
@@ -43,11 +39,6 @@ template <typename Tipo>
 Nodo<Tipo>:: Nodo(Tipo datoExterno) {
     dato = datoExterno;
     pSig = 0;
-}
-
-template <typename Tipo>
-Nodo<Tipo>:: ~Nodo() {
-    delete dato;
 }
 
 // <-------------------- Asignaciones
