@@ -8,7 +8,7 @@
 #define ARCHIVOS_H
 #include<iostream>
 #include<string>
-#include<fstraem>
+#include<fstream>
 
 using namespace std;
 
@@ -16,46 +16,42 @@ class Archivos
 {
     public:
         /*Funciones*/
-         //1)
+
         // PRE : -
         // POST: Crea el objeto.
         Archivos();
-         //2)
-        // PRE : La ruta deve ser valida.
-        // POST: Crea el objeto y carga el archivo señalado en la ruta.Marca abierto
+
+        // PRE : -
+        // POST: Crea el objeto con el archivo abierto
         Archivos(string ruta);
-         //3) "Destructor"
+
         // PRE : -
         // POST: Cierra el archivo abierto.
         ~Archivos();
-        //4)
-        // PRE : El archivo anterior debe estar cerrado
-        // POST: abre un nuevo archivo
+
+        // PRE : -
+        // POST: Abre un nuevo archivo
         void abrirArchivo(string ruta);
-        //5)
-        // PRE : El objeto debe estar cargado
-        // POST: cierra el archivo que este abierto (si lo esta)
+
+        // PRE : El archivo debe estar abierto
+        // POST: Cierra el archivo
         void cerrarArchivo();
-        //6)
-        // PRE :-
-        // POST: Revisa si el archivo sigue abierto
+
+        // PRE : -
+        // POST: Si el archivo esta abierto devuelve true, de lo contrario false
         bool estaAbierto();
-        //7)
-        // PRE : El objeto debe estar cargado
-        // POST: revisa si se leyo la ultima linea del archivo
+
+        // PRE : El archivo debe estar abierto
+        // POST: Si se llegÃ³ al final del archivo devuelve true, de lo contraro false
         bool finalArchivo();
-        //8)
-        // PRE : El objeto debe estar cargado
+
+        // PRE : El archivo debe estar abierto
         // POST: Lee la sigiente linea del archivo
         string leerLinea();
-
-
-    protected:
 
     private:
         /*Atributos*/
         ifstream archivo;
-        bool abierto;      //Booleano que revisa si el archivo esta abiero
-
+        bool abierto;
 };
 #endif // ARCHIVOS_H
