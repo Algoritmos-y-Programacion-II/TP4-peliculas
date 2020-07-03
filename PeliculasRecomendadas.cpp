@@ -100,17 +100,17 @@ void PeliculasRecomendadas::cargarPelicula(Pelicula *&peliculaLeida){
 }
 
 void PeliculasRecomendadas::imprimirActores(Lista<string> *actores){
-    std::cout << "REPARTO: ";
+    std::cout << "\tReparto: ";
     for(int i=0; i < actores->obtenerCantidadElementos(); i++){
         std::cout << actores->obtenerDato(i) << " ";
     }
 }
 
 void PeliculasRecomendadas::imprimirDatosPelicula(Pelicula *peliculaLeida){
-    std::cout << "\nTITULO: " << peliculaLeida->obtenerTitulo() << std::endl;
-    std::cout << "GENERO: " << peliculaLeida->obtenerGenero() << std::endl;
-    std::cout << "PUNTAJE: " << peliculaLeida->obtenerPuntaje() << std::endl;
-    std::cout << "DIRECTOR: " << peliculaLeida->obtenerDirector() << std::endl;
+    std::cout << "\n\n\tTitulo: " << peliculaLeida->obtenerTitulo() << std::endl;
+    std::cout << "\tGenero: " << peliculaLeida->obtenerGenero() << std::endl;
+    std::cout << "\tPuntaje: " << peliculaLeida->obtenerPuntaje() << std::endl;
+    std::cout << "\tDirector: " << peliculaLeida->obtenerDirector() << std::endl;
     imprimirActores(peliculaLeida->obtenerActores());
 }
 
@@ -132,7 +132,6 @@ void PeliculasRecomendadas::liberarMemoria(){
     }
 }
 
-
 void PeliculasRecomendadas::mostrarPeliculasVistas(){
     for(int i=0; i < peliculasVistas.obtenerCantidadElementos(); i++){
         imprimirDatosPelicula(peliculasVistas.obtenerDato(i));
@@ -144,7 +143,6 @@ void PeliculasRecomendadas::mostrarPeliculasNoVistas(){
         imprimirDatosPelicula(peliculasNoVistas.obtenerDato(i));
     }
 }
-
 
 void PeliculasRecomendadas::mostrarPeliculasRecomendadas(){
     for(int i=0; i< peliculasRecomendadas.obtenerCantidadElementos(); i++){
