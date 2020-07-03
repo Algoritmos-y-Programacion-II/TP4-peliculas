@@ -15,14 +15,6 @@ Pelicula::Pelicula(){
     puntaje = 0;
 }
 
-Pelicula::Pelicula(const Pelicula& otraPelicula){
-    titulo = otraPelicula.titulo;
-    genero = otraPelicula.genero;
-    director = otraPelicula.director;
-    puntaje = otraPelicula.puntaje;
-    igualarListasActores(otraPelicula.actores);
-}
-
 void Pelicula::cargarActor(string actorRecibido){
     actores.agregarAlFinal(actorRecibido);
 }
@@ -69,12 +61,4 @@ int Pelicula::obtenerPuntaje(){
 
 string Pelicula::obtenerTitulo(){
     return titulo;
-}
-
-Pelicula Pelicula::operator=(Pelicula otraPelicula){
-    titulo = otraPelicula.titulo;
-    genero = otraPelicula.genero;
-    director = otraPelicula.director;
-    puntaje = otraPelicula.puntaje;
-    igualarListasActores(otraPelicula.actores);
 }

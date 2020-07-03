@@ -5,13 +5,7 @@
 // "clasificacion" (Constructor, consultor, etc.) y dentro de cada clasificacion, tambien
 // ordenados alfabeticamente.
 // NOTA: Los parametros de un metodo podrian estar ordenados segun la forma del archivo peliculas.
-//
-//FORMA DE ARCHIVO PELICULA:
-//Nombre_pelicula
-//Género
-//Puntaje
-//Director/a
-//actor/actriz_1  actor/actriz_2... actor/actriz_n
+
 
 #ifndef PELICULA_H
 #define PELICULA_H
@@ -49,10 +43,6 @@ class Pelicula {
         //POST: CONSTRUYE UNA PELICULA CON SUS ATRIBUTOS EN CERO Y VACIO SEGUN CORRESPONDA.
         Pelicula();
 
-        //PRE:
-        //POST:
-        Pelicula(const Pelicula &otraPelicula);
-
         // MODIFICADORES
 
         //PRE: RECIBE UN STRING.
@@ -74,8 +64,6 @@ class Pelicula {
         //PRE: RECIBE UN STRING.
         //POST: NO DEVUELVE NADA. LE ASIGNA EL VALOR AL ATRIBUTO TITULO.
         void cargarTitulo(string tituloRecibido);
-
-        Pelicula operator=(Pelicula otraPelicula);
 
         // CONSULTORES
 
