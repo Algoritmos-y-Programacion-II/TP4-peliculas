@@ -6,6 +6,7 @@
 
 #ifndef ARCHIVOS_H
 #define ARCHIVOS_H
+#include<iostream>
 #include<string>
 #include<fstraem>
 
@@ -20,21 +21,21 @@ class Archivos
         // POST: Crea el objeto.
         Archivos();
          //2)
-        // PRE : La ruta deve ser valida
+        // PRE : La ruta deve ser valida.
         // POST: Crea el objeto y carga el archivo señalado en la ruta.Marca abierto
         Archivos(string ruta);
          //3) "Destructor"
         // PRE : -
-        // POST: Cierra cualquier archivo abierto. Y Livera recursos.
+        // POST: Cierra el archivo abierto.
         ~Archivos();
         //4)
-        // PRE : El objeto debe estar cargado
-        // POST: cierra el archivo que este abierto (si lo esta)
-        void abrirArchivo();
-        //5)
         // PRE : El archivo anterior debe estar cerrado
         // POST: abre un nuevo archivo
-        void cerrarArchivo(string ruta);
+        void abrirArchivo(string ruta);
+        //5)
+        // PRE : El objeto debe estar cargado
+        // POST: cierra el archivo que este abierto (si lo esta)
+        void cerrarArchivo();
         //6)
         // PRE :-
         // POST: Revisa si el archivo sigue abierto
@@ -55,7 +56,6 @@ class Archivos
         /*Atributos*/
         ifstream archivo;
         bool abierto;      //Booleano que revisa si el archivo esta abiero
-        int posicionLector;//Cuenta las lineas leidas
 
-
+};
 #endif // ARCHIVOS_H

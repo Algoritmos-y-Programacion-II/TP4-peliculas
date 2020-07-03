@@ -2,7 +2,6 @@
 
 /*1)*/Archivos::Archivos(){
     //ctor sin patamentros
-        posicionLector=0;
         abierto=false;
 
 }
@@ -10,9 +9,8 @@
 /*2)*/Archivos::Archivos(string camino){
     //ctor
     abrirArchivo(string camino);
-    if(this->good()){
+    if(this->archivo.good()){
         abirto=true;
-        posicionLector=0;
     }else{
         abierto=false;
     }
@@ -21,25 +19,30 @@
 
 /*3)*/Archivos::~Archivos(){
     //dtor
-    if(this->abierto()){
+    if(this->estaAbierto()){
         this->cerrarArchivo();
     }
 }
 
 /*4)*/void Archivos::abrirArchivo(string camino){
-    if(this->abierto){
-        this->cerrarArchivo();
-    }
+
     try{
         archivo.open(camino);
         abierto=true;
-
+        if(this->estaAbierto()){
+            throw abierto;
+        }
         if(archivo.fail()){
             abierto=false;
             throw abierto;
         }
     }catch(bool &e){
-        cout<<"Archivo invalido "<<endl;
+
+        if(e){
+            cout<<"Ya hay un archivo abierto! "<<endl;
+        }else{
+            cout<<"Archivo invalido "<<endl;
+        }
     }
 }
 
@@ -48,7 +51,7 @@
     abierto=false;
 }
 
-/*6)*/void Archivos::estaAbierto(){
+/*6)*/bool Archivos::estaAbierto(){
     return abierto;
 }
 
@@ -57,7 +60,7 @@
 }
 
 /*8)*/string Archivos::leerLinea(){
-    getline(dato,archivo);
-    posicionLector++;
+    string dato;
+    getline(archivo,dato);
     return(dato);
 }
