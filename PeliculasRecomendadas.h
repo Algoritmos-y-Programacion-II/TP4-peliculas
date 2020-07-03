@@ -33,12 +33,12 @@ class PeliculasRecomendadas {
         //      COMPARA LOS DATOS PARA NO CARGAR UN DATO EXISTENTE.
         void cargarActoresLista(Pelicula *peliculaVista, Lista<string> *actoresVistos);
 
-        //PRE:
-        //POST:
+        //PRE: AMBOS PARAMETROS TIENEN QUE SER PUNTEROS DE TIPO PELICULA VALIDOS
+        //POST: CARGA LA LISTA DE ACTORES DE LA PELICULA LEIDA, EN LA RECOMENDADA
         void cargarActoresPelicula(Pelicula *&peliculaLeida, Pelicula *&peliculaRecomendada);
 
-        //PRE:
-        //POST:
+        //PRE: AMBOS PARAMETROS TIENEN QUE SER PUNTEROS DE TIPO PELICULA VALIDOS
+        //POST: CARGA LOS DATOS DE LA PELICULA LEIDA, EN LA RECOMENDADA
         void cargarDatosPelicula(Pelicula *&peliculaLeida, Pelicula *&peliculaRecomendada);
 
 
@@ -58,16 +58,16 @@ class PeliculasRecomendadas {
         void cargarListasAuxiliares(Lista<string> *generosVistos, Lista<string> *directoresVistos,
                 Lista<string> *actoresVistos);
 
-        //PRE:
-        //POST:
+        //PRE: -
+        //POST: CARGA LAS LISTAS DE PELICULAS VISTAS Y NO VISTAS
         void cargarListasDePeliculas();
 
-        //PRE:
-        //POST:
+        //PRE: RECIBE LA REFERENCIA DE UN PUNTERO DE TIPO PELICULA VALIDO
+        //POST: CARGA LA PELICULA EN LA LISTA DE RECOMENDADAS
         void cargarPelicula(Pelicula *&peliculaLeida);
 
-        //PRE:
-        //POST:
+        //PRE: -
+        //POST: LIBERA LOS RECURSOS UTILIZADOS
         void liberarMemoria();
 
         //PRE: RECIBE UN PUNTERO DE TIPO LISTA DE PELICULA, EN PARTICULAR LAS NO VISTAS, PREVIAMENTE CARGADA.
@@ -85,16 +85,16 @@ class PeliculasRecomendadas {
         //POST: DEVUELVE TRUE SI EL ACTOR ESTA EN LA LISTA, FALSE DE LO CONTRARIO.
         bool actorEncontrado(Pelicula *peliculaLeida, Lista<string> *actoresVistos);
 
-        //PRE:
-        //POST:
+        //PRE: LA LISTA DE ACTORES TIENE QUE ESTAR CARGADA
+        //POST: MUESTRA POR PANTALLA LOS ACTORES
         void imprimirActores(Lista<string> *actores);
 
-        //PRE:
-        //POST:
+        //PRE: LA PELICULA TIENE QUE SER VALIDA
+        //POST: MUESTRA POR PANTALLA LA INFORMACION DE LA PELICULA
         void imprimirDatosPelicula(Pelicula* peliculaLeida);
 
-        //PRE:
-        //POST:
+        //PRE: -
+        //POST: MUESTRA POR PANTALLA LAS PELICULAS RECOMENDADAS
         void mostrarPeliculasRecomendadas();
     public:
 
@@ -102,22 +102,23 @@ class PeliculasRecomendadas {
 
         // CONSULTORES
 
-        //PRE:
-        //POST:
+        //PRE: -
+        //POST: MUESTRA LAS PELICULAS VISTAS
         void mostrarPeliculasVistas();
 
-        //PRE:
-        //POST:
+        //PRE: -
+        //POST: MUESTRA LAS PELICULAS NO VISTAS
         void mostrarPeliculasNoVistas();
 
-        //PRE:
-        //POST:
+        //PRE: -
+        //POST: LLAMA A LOS METODOS QUE REALIZAN LA CARGA DE LA LISTA DE RECOMENDADAS
+        //      Y LUEGO MUESTRA LAS PELICULAS POR PANTALLA
         void verPeliculasRecomendadas();
 
         // DESTRUCTOR
 
-        //PRE:
-        //POST:
+        //PRE: -
+        //POST: LIBERA LOS RECURSOS UTILIZADOS
         ~PeliculasRecomendadas();
 };
 
