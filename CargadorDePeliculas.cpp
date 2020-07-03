@@ -3,7 +3,6 @@
 /*1)*/CargadorDePeliculas::CargadorDePeliculas()
 {
     //ctor
-    numeroPelicula=0;
 }
 
 /*2)*/CargadorDePeliculas::~CargadorDePeliculas()
@@ -35,16 +34,16 @@
         lectura=arch.leerLinea();//Lee el archivo
         peli->cargarTitulo(lectura);//carga en peli
 
+        //Carga Genero          igual al primero
+        lectura=arch.leerLinea();
+        peli->cargarGenero(lectura);
+
         //Carga Puntuacion
         lectura=arch.leerLinea();//Lee
         puntuacion=stoi(lectura);//"castea" de string a int
         peli->cargarPuntaje(puntuacion);//carga en peli
 
-        //Carga Genero             el resto son iguales que el primero
-        lectura=arch.leerLinea();
-        peli->cargarGenero(lectura);
-
-        //carga en Director
+        //carga en Director     igual al primero
         lectura=arch.leerLinea();
         peli->cargarDirector(lectura);
 
@@ -67,6 +66,7 @@
     */
 
     //Variables auxiliares de carga
+
     string actor;//donde aislo a cada actor
     char indice;//aloja cada uno de los caracteres antes de cargalo en actores
     int contador;
@@ -75,14 +75,15 @@
 
     for(contador=0 ,contador<lectura.length(),contador++){//Recorre el string #
 
-        while((indice!=' ')&&(indice!='/')){//Corta la carga de cada actor.
+        incice=peli[contador];//#
+        if((indice!=' ')&&(indice!='/')){//Corta la carga de cada actor.
 
-            incice=peli[contador];//#
             actor=+indice;
-        }
+            }else{
 
-        peli->cargarActor(actor);//Cargo el contenido de actor al final de la lista;
-        actor.erase(0,contador);//Limpo a la variable actor
+            peli->cargarActor(actor);//Cargo el contenido de actor al final de la lista;
+            actor.erase(0,contador);//Limpo a la variable actor
+        }
     }
 
 }
