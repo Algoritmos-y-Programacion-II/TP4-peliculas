@@ -33,6 +33,12 @@ class Pelicula {
         //POST: NO DEVUELVE NADA. LE ASIGNA LOS VALORES DE LA LISTA RECIBIDA AL ATRIBUTO ACTORES
         void igualarListasActores(Lista<string> actoresRecibidos);
 
+        // CONSULTORES
+
+        //PRE: NO RECIBE NADA.
+        //POST: NO DEVUELVE NADA. ITERA SOBRE LA LISTA E IMPRIME LOS DATOS.
+        void imprimirActores();
+
     public:
 
         // METODOS
@@ -66,6 +72,10 @@ class Pelicula {
         void cargarTitulo(string tituloRecibido);
 
         // CONSULTORES
+
+        //PRE: NO RECIBE NADA.
+        //POST: IMPRIME LOS ATRIBUTOS DE LA PELICULA.
+        void imprimirDatosPelicula();
 
         //PRE: NO RECIBE NADA.
         //POST: DEVUELVE UN PUNTERO DE TIPO LISTA, ESPECIFICAMENTE, DIRECCIONADO A LA LISTA ACTORES.

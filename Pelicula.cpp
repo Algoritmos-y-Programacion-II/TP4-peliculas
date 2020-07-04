@@ -62,3 +62,18 @@ int Pelicula::obtenerPuntaje(){
 string Pelicula::obtenerTitulo(){
     return titulo;
 }
+
+void Pelicula::imprimirActores(){
+    std::cout << "\tREPARTO: ";
+    for(int i=0; i < actores.obtenerCantidadElementos(); i++){
+        std::cout << actores.obtenerDato(i) << " ";
+    }
+}
+
+void Pelicula::imprimirDatosPelicula(){
+    std::cout << "\n\tTITULO: " << titulo << std::endl;
+    std::cout << "\tGENERO: " << genero << std::endl;
+    std::cout << "\tPUNTAJE: " << puntaje << std::endl;
+    std::cout << "\tDIRECTOR: " << director << std::endl;
+    imprimirActores();
+}
