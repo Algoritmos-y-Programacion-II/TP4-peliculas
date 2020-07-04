@@ -111,9 +111,7 @@ void PeliculasRecomendadas::crearPeliculasRecomendadas(){
         if (peliculasVistas.obtenerCantidadElementos() != 0) {
             recomendarPeliculas();
         } else {
-            if (peliculasNoVistas.obtenerCantidadElementos() != 0) {
                 recomendarPorPuntaje();
-            }
         }
     }
 }
