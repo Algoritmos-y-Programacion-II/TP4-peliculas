@@ -41,7 +41,6 @@ class PeliculasRecomendadas {
         //POST: CARGA LOS DATOS DE LA PELICULA LEIDA, EN LA RECOMENDADA
         void cargarDatosPelicula(Pelicula *&peliculaLeida, Pelicula *&peliculaRecomendada);
 
-
         //PRE: RECIBE UN PUNTERO DE TIPO PELICULA Y UNA LISTA DE STRINGS PREVIAMENTE CARGADA.
         //POST: NO DEVUELVE NADA. SI EL DIRECTOR DE LA PELICULA ESTA EN LA LISTA NO HACE NADA,
         //      DE LO CONTRARIO, LO CARGA.
@@ -58,13 +57,14 @@ class PeliculasRecomendadas {
         void cargarListasAuxiliares(Lista<string> *generosVistos, Lista<string> *directoresVistos,
                 Lista<string> *actoresVistos);
 
-        //PRE: -
-        //POST: CARGA LAS LISTAS DE PELICULAS VISTAS Y NO VISTAS
-        void cargarListasDePeliculas();
-
         //PRE: RECIBE LA REFERENCIA DE UN PUNTERO DE TIPO PELICULA VALIDO
         //POST: CARGA LA PELICULA EN LA LISTA DE RECOMENDADAS
         void cargarPelicula(Pelicula *&peliculaLeida);
+
+        //PRE: -
+        //POST: SI LA LISTA DE RECOMENDADAS ESTA VACIA LLAMA A LOS METODOS QUE REALIZAN LA CARGA DE DATOS
+        //      DE LO CONTRARIO NO HACE NADA.
+        void crearPeliculasRecomendadas();
 
         //PRE: -
         //POST: LIBERA LOS RECURSOS UTILIZADOS
@@ -93,12 +93,13 @@ class PeliculasRecomendadas {
         //POST: MUESTRA POR PANTALLA LA INFORMACION DE LA PELICULA
         void imprimirDatosPelicula(Pelicula* peliculaLeida);
 
-        //PRE: -
-        //POST: MUESTRA POR PANTALLA LAS PELICULAS RECOMENDADAS
-        void mostrarPeliculasRecomendadas();
     public:
 
         // METODOS
+
+        // CONSTRUCTOR
+
+        PeliculasRecomendadas();
 
         // CONSULTORES
 
@@ -111,9 +112,8 @@ class PeliculasRecomendadas {
         void mostrarPeliculasNoVistas();
 
         //PRE: -
-        //POST: LLAMA A LOS METODOS QUE REALIZAN LA CARGA DE LA LISTA DE RECOMENDADAS
-        //      Y LUEGO MUESTRA LAS PELICULAS POR PANTALLA
-        void verPeliculasRecomendadas();
+        //POST: MUESTRA POR PANTALLA LAS PELICULAS RECOMENDADAS
+        void mostrarPeliculasRecomendadas();
 
         // DESTRUCTOR
 

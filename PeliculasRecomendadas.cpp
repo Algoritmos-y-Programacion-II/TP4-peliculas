@@ -1,8 +1,14 @@
 //
 // Created by root-MKevin on 28/6/20.
 // Los metodos se encuentran ordenados alfabeticamente sin distincion del tipo que sea.
+// Si hubiese un constructor y/o un destructor se encuentran al principio y al final, respectivamente.
 
 #include "PeliculasRecomendadas.h"
+
+PeliculasRecomendadas::PeliculasRecomendadas(){
+    cargador.cargar(ARCHIVO_VISTAS, peliculasVistas);
+    cargador.cargar(ARCHIVO_NO_VISTAS, peliculasNoVistas);
+}
 
 bool PeliculasRecomendadas::actorEncontrado(Pelicula *peliculaLeida, Lista<string> *actoresVistos){
     Lista<string> *listaAuxiliar = peliculaLeida->obtenerActores();
@@ -88,30 +94,22 @@ void PeliculasRecomendadas::cargarListasAuxiliares(Lista<string> *generosVistos,
     }
 }
 
-void PeliculasRecomendadas::cargarListasDePeliculas(){
-    cargador.cargar(ARCHIVO_VISTAS, peliculasVistas);
-    cargador.cargar(ARCHIVO_NO_VISTAS, peliculasNoVistas);
-}
-
 void PeliculasRecomendadas::cargarPelicula(Pelicula *&peliculaLeida){
     Pelicula *peliculaRecomendada = new Pelicula;
     cargarDatosPelicula(peliculaLeida,peliculaRecomendada);
     peliculasRecomendadas.agregarAlFinal(peliculaRecomendada);
 }
 
-void PeliculasRecomendadas::imprimirActores(Lista<string> *actores){
-    std::cout << "\tReparto: ";
-    for(int i=0; i < actores->obtenerCantidadElementos(); i++){
-        std::cout << actores->obtenerDato(i) << " ";
+void PeliculasRecomendadas::crearPeliculasRecomendadas(){
+    if(peliculasRecomendadas.obtenerCantidadElementos() == 0) {
+        if (peliculasVistas.obtenerCantidadElementos() != 0) {
+            recomendarPeliculas();
+        } else {
+            if (peliculasNoVistas.obtenerCantidadElementos() != 0) {
+                recomendarPorPuntaje();
+            }
+        }
     }
-}
-
-void PeliculasRecomendadas::imprimirDatosPelicula(Pelicula *peliculaLeida){
-    std::cout << "\n\n\tTitulo: " << peliculaLeida->obtenerTitulo() << std::endl;
-    std::cout << "\tGenero: " << peliculaLeida->obtenerGenero() << std::endl;
-    std::cout << "\tPuntaje: " << peliculaLeida->obtenerPuntaje() << std::endl;
-    std::cout << "\tDirector: " << peliculaLeida->obtenerDirector() << std::endl;
-    imprimirActores(peliculaLeida->obtenerActores());
 }
 
 void PeliculasRecomendadas::liberarMemoria(){
@@ -134,19 +132,20 @@ void PeliculasRecomendadas::liberarMemoria(){
 
 void PeliculasRecomendadas::mostrarPeliculasVistas(){
     for(int i=0; i < peliculasVistas.obtenerCantidadElementos(); i++){
-        imprimirDatosPelicula(peliculasVistas.obtenerDato(i));
+        peliculasVistas.obtenerDato(i)->imprimirDatosPelcula());
     }
 }
 
 void PeliculasRecomendadas::mostrarPeliculasNoVistas(){
     for(int i = 0; i < peliculasNoVistas.obtenerCantidadElementos(); i++){
-        imprimirDatosPelicula(peliculasNoVistas.obtenerDato(i));
+        peliculasNoVistas.obtenerDato(i)->imprimirDatosPelicula();
     }
 }
 
 void PeliculasRecomendadas::mostrarPeliculasRecomendadas(){
+    crearPeliculasRecomendadas();
     for(int i=0; i< peliculasRecomendadas.obtenerCantidadElementos(); i++){
-        imprimirDatosPelicula(peliculasRecomendadas.obtenerDato(i));
+        peliculasRecomendadas.obtenerDato(i)->imprimirDatosPelicula();
     }
 }
 
@@ -179,18 +178,6 @@ void PeliculasRecomendadas::recomendarPorPuntaje(){
             cargarPelicula(peliculaLeida);
         }
     }
-}
-
-void PeliculasRecomendadas::verPeliculasRecomendadas(){
-    if(peliculasVistas.obtenerCantidadElementos() != 0){
-        recomendarPeliculas();
-    }
-    else{
-        if(peliculasNoVistas.obtenerCantidadElementos() != 0) {
-            recomendarPorPuntaje();
-        }
-    }
-    mostrarPeliculasRecomendadas();
 }
 
 PeliculasRecomendadas::~PeliculasRecomendadas(){
