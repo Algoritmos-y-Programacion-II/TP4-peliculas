@@ -6,8 +6,14 @@
 #include "PeliculasRecomendadas.h"
 
 PeliculasRecomendadas::PeliculasRecomendadas(){
+
     cargador.cargar(ARCHIVO_VISTAS, peliculasVistas);
     cargador.cargar(ARCHIVO_NO_VISTAS, peliculasNoVistas);
+    if (peliculasNoVistas.obtenerCantidadElementos == 0) {
+        liberarMemoria();
+        std::cout << "NO HAY PELICULAS SIN VER. FIN DE PROGRAMA" << std::endl;
+        exit(1);
+        }
 }
 
 bool PeliculasRecomendadas::actorEncontrado(Pelicula *peliculaLeida, Lista<string> *actoresVistos){
