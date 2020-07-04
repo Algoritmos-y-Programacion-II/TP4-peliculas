@@ -35,14 +35,6 @@ void Pelicula::cargarTitulo(string tituloRecibido){
     titulo = tituloRecibido;
 }
 
-void Pelicula::igualarListasActores(Lista<string> actoresRecibidos){
-    string actorAuxiliar;
-    for(int i = 0; actoresRecibidos.obtenerCantidadElementos(); i++){
-        actorAuxiliar = actoresRecibidos.obtenerDato(i);
-        actores.agregarAlFinal(actorAuxiliar);
-    }
-}
-
 Lista<string>* Pelicula::obtenerActores(){
     return &actores;
 }
