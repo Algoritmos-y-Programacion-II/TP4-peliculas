@@ -18,25 +18,20 @@ const string PELICULAS_VISTAS = "peliculasVistas.txt";
 class CargadorDePeliculas {
     public:
         /*Metodos*/
+
         //1)
         // PRE: -
-        // POST: Construye un objeto de tipo CargadorDePeliculas solo si la ruta PELICULAS_NO_VISTAS existe
-        CargadorDePeliculas();
+        // POST: Si existe el archivo de peliculas no vistas devuelve true, de lo contrario false
+        bool existePeliculasNoVistas();
 
         //2)
-        // PRE: -
-        // POST: Si existe el archivo de peliculas no vistas no pasa nada.
-        //       Si no existe, finaliza la ejecucion del programa
-        void existePeliculasNoVistas();
-
-        //3)
         // PRE: Deben proporcionarse un string y lista validos como argumentos
         // POST: Carga los datos del archivo en la lista de peliculas
         void cargar(string camino, Lista<Pelicula*> &cartelera);
 
     private:
 
-        //4)
+        //3)
         // PRE: Deben proporcionarse un string y lista validos como argumentos
         // POST: Carga la lista de actores en la pelicula
         void cargarListaDeActores(string actores, Pelicula *&peli);

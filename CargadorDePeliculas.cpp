@@ -1,18 +1,10 @@
 #include "CargadorDePeliculas.h"
 
-/*1)*/CargadorDePeliculas:: CargadorDePeliculas() {
-    existePeliculasNoVistas();
+/*1)*/bool CargadorDePeliculas::existePeliculasNoVistas() {
+    return archivo.existeRuta(PELICULAS_NO_VISTAS))
 }
 
-/*2)*/void CargadorDePeliculas::existePeliculasNoVistas() {
-    if (!archivo.existeRuta(PELICULAS_NO_VISTAS)) {
-        cout << "\t-- AVISO -- No se pudo abrir el archivo \"" << PELICULAS_NO_VISTAS <<
-             "\". \n\t\t\tFinalizara la ejecucion del programa\n";
-        exit(10);
-    }
-}
-
-/*3)*/void CargadorDePeliculas::cargar(string camino, Lista<*Pelicula> &cartelera){
+/*2)*/void CargadorDePeliculas::cargar(string camino, Lista<*Pelicula> &cartelera){
 
     Pelicula *peli;
     string lectura;
@@ -49,7 +41,7 @@
      }
 }
 
-/*4)*/void CargadorDePeliculas::cargarListaDeActores(string actores, Pelicula *&peli){
+/*3)*/void CargadorDePeliculas::cargarListaDeActores(string actores, Pelicula *&peli){
 
     string actor;
     char caracter;
