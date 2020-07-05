@@ -1,9 +1,18 @@
 #include "CargadorDePeliculas.h"
 
-/*1)*/CargadorDePeliculas::CargadorDePeliculas() {
+/*1)*/CargadorDePeliculas:: CargadorDePeliculas() {
+    existePeliculasNoVistas();
 }
 
-/*2)*/void CargadorDePeliculas::cargar(string camino, Lista<*Pelicula> &cartelera){
+/*2)*/void CargadorDePeliculas::existePeliculasNoVistas() {
+    if (!archivo.existeRuta(PELICULAS_NO_VISTAS)) {
+        cout << "\t-- AVISO -- No se pudo abrir el archivo \"" << PELICULAS_NO_VISTAS <<
+             "\". \n\t\t\tFinalizara la ejecucion del programa\n";
+        exit(10);
+    }
+}
+
+/*3)*/void CargadorDePeliculas::cargar(string camino, Lista<*Pelicula> &cartelera){
 
     Pelicula *peli;
     string lectura;
@@ -40,7 +49,7 @@
      }
 }
 
-/*3)*/void CargadorDePeliculas::cargarListaDeActores(string actores, Pelicula *&peli){
+/*4)*/void CargadorDePeliculas::cargarListaDeActores(string actores, Pelicula *&peli){
 
     string actor;
     char caracter;
@@ -58,14 +67,14 @@
     }
 }
 
-/*3)*//*
+/*
 //Funcion opcional que libera las listas de actores dentro decada *Pelicula de la lista
 //IMPORTANTE: debe existir el Metodo:  vaciarListaDeActores en peliculas
 void CargadorDePeliculas::VaciarCartelera(Lista<*Pelicula> &cartelera){
     Pelicula *peli;
     int cantidadDeElementos;
     cantidadDeElementos=cartelera.obtenerCantidadElementos();
-        for(int i=0; i=< cantidadDeElementos;i++){
+    for(int i=0; i=< cantidadDeElementos;i++){
         peli=cartelera.obtenerDato(i);
         &peli.vaciarListaDeActores();
     }

@@ -20,18 +20,19 @@ class CargadorDePeliculas {
         /*Metodos*/
         //1)
         // PRE: -
-        // POST: Crea el constructor. Setea el numero de peliculas cargadas en 0 (numeroPelicula)
+        // POST: Construye un objeto de tipo CargadorDePeliculas solo si la ruta PELICULAS_NO_VISTAS existe
         CargadorDePeliculas();
 
         //2)
+        // PRE: -
+        // POST: Si existe el archivo de peliculas no vistas no pasa nada.
+        //       Si no existe, finaliza la ejecucion del programa
+        void existePeliculasNoVistas();
+
+        //3)
         // PRE: Deben proporcionarse un string y lista validos como argumentos
         // POST: Carga los datos del archivo en la lista de peliculas
         void cargar(string camino, Lista<Pelicula*> &cartelera);
-
-        //3)
-        //PRE: la lista debe estar cargada
-        //POST: Vacia todas las listas de actores de cada elemento de la lista
-        //void CargadorDePeliculas::VaciarActores(Lista<*Pelicula> &cartelera)
 
     private:
 
