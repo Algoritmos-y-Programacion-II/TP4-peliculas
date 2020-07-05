@@ -15,7 +15,7 @@ using namespace std;
 class Archivos
 {
     public:
-        /*Funciones*/
+        /*Metodos*/
 
         // PRE : -
         // POST: Crea el objeto.
@@ -30,7 +30,7 @@ class Archivos
         ~Archivos();
 
         // PRE : -
-        // POST: Abre un nuevo archivo
+        // POST: Abre el archivo de la ruta en modo lectura
         void abrirArchivo(string ruta);
 
         // PRE : El archivo debe estar abierto
@@ -44,6 +44,10 @@ class Archivos
         // PRE : El archivo debe estar abierto
         // POST: Si se llegó al final del archivo devuelve true, de lo contraro false
         bool finalArchivo();
+
+        // PRE: -
+        // POST: Devuelve true si existe la ruta del archivo, de lo contrario false
+        bool existeRuta(string ruta);
 
         // PRE : El archivo debe estar abierto
         // POST: Lee la sigiente linea del archivo
