@@ -15,14 +15,6 @@ Pelicula::Pelicula(){
     puntaje = 0;
 }
 
-Pelicula::Pelicula(Pelicula otraPelicula){
-    titulo = otraPelicula.titulo;
-    genero = otraPelicula.genero;
-    director = otraPelicula.director;
-    puntaje = otraPelicula.puntaje;
-    igualarListasActores(otraPelicula.actores);
-}
-
 void Pelicula::cargarActor(string actorRecibido){
     actores.agregarAlFinal(actorRecibido);
 }
@@ -43,15 +35,7 @@ void Pelicula::cargarTitulo(string tituloRecibido){
     titulo = tituloRecibido;
 }
 
-void igualarListasActores(Lista<string> *actoresRecibidos){
-    string actorAuxiliar;
-    for(int i = 0; actoresRecibidos->obtenerCantidadElementos; i++){
-        actorAuxiliar = actoresRecibidos->obtenerDato(i);
-        actores.agregarAlFinal(actorAuxiliar);
-    }
-}
-
-Lista* Pelicula::obtenerActores(){
+Lista<string>* Pelicula::obtenerActores(){
     return &actores;
 }
 
@@ -71,10 +55,17 @@ string Pelicula::obtenerTitulo(){
     return titulo;
 }
 
-Pelicula Pelicula::operator=(Pelicula otraPelicula){
-    titulo = otraPelicula.titulo;
-    genero = otraPelicula.genero;
-    director = otraPelicula.director;
-    puntaje = otraPelicula.puntaje;
-    igualarListasActores(otraPelicula.actores);
+void Pelicula::imprimirActores(){
+    std::cout << "\tREPARTO: ";
+    for(int i=0; i < actores.obtenerCantidadElementos(); i++){
+        std::cout << actores.obtenerDato(i) << " ";
+    }
+}
+
+void Pelicula::imprimirDatosPelicula(){
+    std::cout << "\n\tTITULO: " << titulo << std::endl;
+    std::cout << "\tGENERO: " << genero << std::endl;
+    std::cout << "\tPUNTAJE: " << puntaje << std::endl;
+    std::cout << "\tDIRECTOR: " << director << std::endl;
+    imprimirActores();
 }

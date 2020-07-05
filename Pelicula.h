@@ -5,19 +5,12 @@
 // "clasificacion" (Constructor, consultor, etc.) y dentro de cada clasificacion, tambien
 // ordenados alfabeticamente.
 // NOTA: Los parametros de un metodo podrian estar ordenados segun la forma del archivo peliculas.
-//
-//FORMA DE ARCHIVO PELICULA:
-//Nombre_pelicula
-//Género
-//Puntaje
-//Director/a
-//actor/actriz_1  actor/actriz_2... actor/actriz_n
+
 
 #ifndef PELICULA_H
 #define PELICULA_H
 
 #include "Lista.h"
-#include "Persona.h"
 
 using namespace std;
 
@@ -34,11 +27,11 @@ class Pelicula {
 
         // METODOS
 
-        // MODIFICADORES
+        // CONSULTORES
 
-        //PRE: RECIBE UN PUNTERO DE TIPO LISTA DE STRING.
-        //POST: NO DEVUELVE NADA. LE ASIGNA LOS VALORES DE LA LISTA RECIBIDA AL ATRIBUTO ACTORES
-        void igualarListasActores(Lista<string> *actoresRecibidos);
+        //PRE: NO RECIBE NADA.
+        //POST: NO DEVUELVE NADA. ITERA SOBRE LA LISTA E IMPRIME LOS DATOS.
+        void imprimirActores();
 
     public:
 
@@ -49,10 +42,6 @@ class Pelicula {
         //PRE: NO RECIBE NADA.
         //POST: CONSTRUYE UNA PELICULA CON SUS ATRIBUTOS EN CERO Y VACIO SEGUN CORRESPONDA.
         Pelicula();
-
-        //PRE:
-        //POST:
-        Pelicula(Pelicula otraPelicula);
 
         // MODIFICADORES
 
@@ -76,9 +65,11 @@ class Pelicula {
         //POST: NO DEVUELVE NADA. LE ASIGNA EL VALOR AL ATRIBUTO TITULO.
         void cargarTitulo(string tituloRecibido);
 
-        Pelicula operator=(Pelicula otraPelicula);
-
         // CONSULTORES
+
+        //PRE: NO RECIBE NADA.
+        //POST: IMPRIME LOS ATRIBUTOS DE LA PELICULA.
+        void imprimirDatosPelicula();
 
         //PRE: NO RECIBE NADA.
         //POST: DEVUELVE UN PUNTERO DE TIPO LISTA, ESPECIFICAMENTE, DIRECCIONADO A LA LISTA ACTORES.
