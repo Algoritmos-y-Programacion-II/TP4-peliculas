@@ -1,12 +1,6 @@
 #include "CargadorDePeliculas.h"
 
-/*1)*/CargadorDePeliculas::CargadorDePeliculas() {
-    cargas = 0;
-}
-
-/*2)*/CargadorDePeliculas::~CargadorDePeliculas() {}
-
-/*3)*/void CargadorDePeliculas::cargar(string camino, Lista<Pelicula*> &cartelera){
+/*1)*/void CargadorDePeliculas::cargar(string camino, Lista<Pelicula*> &cartelera){
     /*
     Funciona creando uno a uno objetos Pelicula, alojados en memoria dinamica, y cargandolos desde un archivo,
     e introduciendo el puntero que los señalaal final de Lista<*Pelicula>
@@ -48,7 +42,7 @@
      cargas++;
 }
 
-/*4)*/void CargadorDePeliculas::cargarListaDeActores(string actores,Pelicula *&peli){
+/*2)*/void CargadorDePeliculas::cargarListaDeActores(string actores,Pelicula *&peli){
     /*
     Toma un string donde esta cargada la linea del archivo donde se nombra a todos los actores (nombre_apellido)
     separados por espacios, y la desarma caracter a caracter, guardando en "actor" todos los caracteres que no se corresponden
@@ -72,20 +66,19 @@
 
 }
 
-/*5)*/
-// Devuelva la cantidad de elementos cargados
-int getCargas(){
-    return(cargas);
+/*3)*/
+bool CargadorDePeliculas::existePeliculasNoVistas() {
+    return arch.existeRuta(PELICULAS_NO_VISTAS);
 }
 
-/*6)*//*
+/*4)*//*
 //Funcion opcional que libera las listas de actores dentro de cada *Pelicula de la lista
 //IMPORTANTE: debe existir el Metodo:  vaciarListaDeActores en peliculas
-void CargadorDePeliculas::VaciarCartelera(Lista<*Pelicula> &cartelera){
+void CargadorDePeliculas::vaciarCartelera(Lista<Pelicula*> &cartelera){
     Pelicula *peli;
     int cantidadDeElementos;
     cantidadDeElementos=cartelera.obtenerCantidadElementos();
-        for(int i=0; i=< cantidadDeElementos;i++){
+    for(int i=0; i=< cantidadDeElementos;i++){
         peli=cartelera.obtenerDato(i);
         &peli.vaciarListaDeActores();
     }

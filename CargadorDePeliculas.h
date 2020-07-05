@@ -14,39 +14,29 @@ using namespace std;
 class CargadorDePeliculas
 {
     public:
-        /*Funciones*/
+        /*Metodos*/
         //1)
-        // PRE: -
-        // POST: Crea el constructor. Setea el numero de peliculas cargadas en 0 (numeroPelicula)
-        CargadorDePeliculas();
-        //2)
-        // PRE: -
-        // POST: Es una mera formalidad
-        ~CargadorDePeliculas();
-        //3)
-        // PRE: Deben Proporcionarse un archivo y Lista validos como argumentos
+        // PRE: Deben proporcionarse un string y lista validos como argumentos
         // POST: Setea el numero de peliculas cargadas en 0 (numeroPelicula)
         void cargar(string camino,Lista<*Pelicula> &cartelera);
-        //5)
-        // PRE: Deben Proporcionarse un archivo y Lista validos como argumentos
-        // POST: Setea el numero de peliculas cargadas en 0 (numeroPelicula)
-        int getCargas();
-        //6)
-        //PRE: la lista debe estar cargada
+        //3)
+        // PRE: -
+        // POST: Si existe el archivo de peliculas no vistas devuelve true, de lo contrario false
+        bool existePeliculasNoVistas();
+        //4)
+        //PRE: La lista debe estar cargada
         //POST: Vacia todas las listas de actores de cada elemento de la lista
-        //void CargadorDePeliculas::VaciarActores(Lista<*Pelicula> &cartelera)
+        //void CargadorDePeliculas::vaciarActores(Lista<Pelicula*> &cartelera)
 
     private:
 
-        //4)
-        // PRE: Deven Proporcionarse un archivo y Lista validos como argumentos
-        // POST: Carga La sublista "Actores" dentro de peli a partir de un unico string
-        void cargarListaDeActores(string actores,Pelicula *&peli);
+        //2)
+        // PRE: Deben proporcionarse un string y puntero a pelicula validos como argumentos
+        // POST: Carga la sublista de actores en la pelicula
+        void cargarListaDeActores(string actores, Pelicula *&peli);
 
        /*Atributos*/
         Archivos arch;
-       //Cuenta la cantidad de objetos cargados
-        int cargas;
 };
 
 #endif // CARGADORDEPELICULAS_H
