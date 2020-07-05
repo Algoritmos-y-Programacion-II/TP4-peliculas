@@ -11,40 +11,37 @@
 #include"Pelicula.h"
 
 using namespace std;
-class CargadorDePeliculas
-{
+
+const string PELICULAS_NO_VISTAS = "peliculasNoVistas.txt";
+const string PELICULAS_VISTAS = "peliculasVistas.txt";
+
+class CargadorDePeliculas {
     public:
-        /*Funciones*/
+        /*Metodos*/
         //1)
         // PRE: -
         // POST: Crea el constructor. Setea el numero de peliculas cargadas en 0 (numeroPelicula)
         CargadorDePeliculas();
+
         //2)
-        // PRE: -
-        // POST: Es una mera formalidad
-        ~CargadorDePeliculas();
+        // PRE: Deben proporcionarse un string y lista validos como argumentos
+        // POST: Carga los datos del archivo en la lista de peliculas
+        void cargar(string camino, Lista<Pelicula*> &cartelera);
+
         //3)
-        // PRE: Deven Proporcionarse un archivo y Lista validos como argumentos
-        // POST: Setea el numero de peliculas cargadas en 0 (numeroPelicula)
-        void cargar(string camino,Lista<*Pelicula> &cartelera);
-        //5)
         //PRE: la lista debe estar cargada
         //POST: Vacia todas las listas de actores de cada elemento de la lista
         //void CargadorDePeliculas::VaciarActores(Lista<*Pelicula> &cartelera)
 
-    protected:
-
     private:
 
         //4)
-        // PRE: Deven Proporcionarse un archivo y Lista validos como argumentos
-        // POST: Carga La sublista "Actores" dentro de peli a partir de un unico string
-        void cargarListaDeActores(string lectura,Pelicula *&peli);
-
+        // PRE: Deben proporcionarse un string y lista validos como argumentos
+        // POST: Carga la lista de actores en la pelicula
+        void cargarListaDeActores(string actores, Pelicula *&peli);
 
        /*Atributos*/
-       //Cuenta la cantidad de objetos cargados
-        Archivos arch;
+        Archivos archivo;
 };
 
 #endif // CARGADORDEPELICULAS_H

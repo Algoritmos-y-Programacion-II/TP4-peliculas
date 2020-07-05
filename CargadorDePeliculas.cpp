@@ -1,95 +1,65 @@
 #include "CargadorDePeliculas.h"
 
-/*1)*/CargadorDePeliculas::CargadorDePeliculas()
-{
-    //ctor
+/*1)*/CargadorDePeliculas::CargadorDePeliculas() {
 }
 
-/*2)*/CargadorDePeliculas::~CargadorDePeliculas()
-{
-    //dtor
-}
+/*2)*/void CargadorDePeliculas::cargar(string camino, Lista<*Pelicula> &cartelera){
 
-/*3)*/void CargadorDePeliculas::cargar(string camino, Lista<*Pelicula> &cartelera){
-    /*
-    Funciona creando uno a uno objetos Pelicula, alojados en memoria dinamica, y cargandolos desde un archivo,
-    e introduciendo el puntero que los señalaal final de Lista<*Pelicula>
-    */
-    //NOTA: El metodo fue adaptado de otro que cargaba un objeto Pelicula en lugar de un puntero. keep an eye for gramar erros
-
-    //Variables auxiliares de carga
     Pelicula *peli;
     string lectura;
     int puntuacion;
 
-    //Abre el archivo
     arch.abrirArchivo(camino);
-    numeroPelicula=0;
 
     while(!arch.finalArchivo()){
-        //Crea un nuevo objeto en la memoria dinamica
         peli = new Pelicula;
 
         //Carga Titulo
-        lectura=arch.leerLinea();//Lee el archivo
-        peli->cargarTitulo(lectura);//carga en peli
+        lectura = archivo.leerLinea();
+        peli->cargarTitulo(lectura);
 
-        //Carga Genero          igual al primero
-        lectura=arch.leerLinea();
+        //Carga Genero
+        lectura = archivo.leerLinea();
         peli->cargarGenero(lectura);
 
         //Carga Puntuacion
-        lectura=arch.leerLinea();//Lee
-        puntuacion=stoi(lectura);//"castea" de string a int
-        peli->cargarPuntaje(puntuacion);//carga en peli
+        lectura = archivo.leerLinea();//Lee
+        puntuacion = atoi(lectura.c_str());
+        peli->cargarPuntaje(puntuacion);
 
-        //carga en Director     igual al primero
-        lectura=arch.leerLinea();
+        //Carga Director
+        lectura = archivo.leerLinea();
         peli->cargarDirector(lectura);
 
-        //carga en la Lista de Actores
-        lectura=arch.leerLinea();
-        cargarListaDeActores(lectura, peli);//Metodo especialmente crado para adaptarse al formato del texto
+        //Carga Actores
+        lectura = archivo.leerLinea();
+        cargarListaDeActores(lectura, peli);
 
         //Agrega peli al final de la lista
         cartelera.agregarAlFinal(peli);
-        numeroPelicula++;
-
      }
 }
 
-/*4)*/void CargadorDePeliculas::cargarListaDeActores(string lectura,Pelicula *&peli){
-    /*
-    Toma un string donde esta cargada la linea del archivo donde se nombra a todos los actores (nombre_apellido)
-    separados por espacios, y la desarma caracter a caracter, guardando en "actor" todos los caracteres que no se corresponden
-    con espacios. Finalmente, carga al actor en la lista
-    */
+/*3)*/void CargadorDePeliculas::cargarListaDeActores(string actores, Pelicula *&peli){
 
-    //Variables auxiliares de carga
+    string actor;
+    char caracter;
 
-    string actor;//donde aislo a cada actor
-    char indice;//aloja cada uno de los caracteres antes de cargalo en actores
-    int contador;
+    for(int contador = 0; contador < lectura.length(); contador++){
 
-    lectura+='/';//coloco una "marca de fin" al final del string
-
-    for(contador=0 ,contador<lectura.length(),contador++){//Recorre el string #
-
-        incice=peli[contador];//#
-        if((indice!=' ')&&(indice!='/')){//Corta la carga de cada actor.
-
+        incice = actores[contador];
+        if((indice != ' ')&&(indice != '\000'))
             actor=+indice;
-            }else{
 
-            peli->cargarActor(actor);//Cargo el contenido de actor al final de la lista;
-            actor.erase(0,contador);//Limpo a la variable actor
+        else{
+            peli->cargarActor(actor);
+            actor.erase(0,contador);
         }
     }
-
 }
 
-/*5)*//*
-//Funcion opcional que livera las listas de actores dentro decada *Pelicula de la lista
+/*3)*//*
+//Funcion opcional que libera las listas de actores dentro decada *Pelicula de la lista
 //IMPORTANTE: debe existir el Metodo:  vaciarListaDeActores en peliculas
 void CargadorDePeliculas::VaciarCartelera(Lista<*Pelicula> &cartelera){
     Pelicula *peli;
