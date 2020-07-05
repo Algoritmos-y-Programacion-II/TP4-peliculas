@@ -2,25 +2,15 @@
 #include"Archivos.h"
 
 Archivos::Archivos(){
-    //ctor sin patamentros
-        abierto=false;
-
+    abierto = false;
 }
 
 Archivos::Archivos(string camino){
-    //ctor
     abrirArchivo(string camino);
-    if(this->archivo.good()){
-        abierto=true;
-    }else{
-        abierto=false;
-    }
-
 }
 
 Archivos::~Archivos(){
-    //dtor
-    if(this->estaAbierto()){
+    if(this->abierto){
         this->cerrarArchivo();
     }
 }
@@ -32,24 +22,24 @@ void Archivos::abrirArchivo(string camino){
             throw abierto;
         }
         archivo.open(camino);
-        abierto=true;
+        abierto = true;
         if(archivo.fail()){
-            abierto=false;
+            abierto = false;
             throw abierto;
         }
-    }catch(bool &e){
-
+    }
+    catch(bool &e){
         if(e){
-            cout<<"\t-- AVISO -- Ya hay un archivo con ese nombre abierto! "<<endl;
+            cout<<"\t-- AVISO -- Ya hay un archivo con ese nombre abierto! " << endl;
         }else{
-            cout<<"\t-- AVISO -- No se pudo abrir el archivo \"" << camino << "\"" <<endl;
+            cout<<"\t-- AVISO -- No se pudo abrir el archivo \"" << camino << "\"" << endl;
         }
     }
 }
 
 void Archivos::cerrarArchivo(){
     archivo.close();
-    abierto=false;
+    abierto = false;
 }
 
 bool Archivos::estaAbierto(){
@@ -57,7 +47,7 @@ bool Archivos::estaAbierto(){
 }
 
 bool Archivos::finalArchivo(){
-    return(archivo.eof());
+    return archivo.eof();
 }
 
 bool Archivos::existeRuta(string ruta) {
@@ -70,5 +60,5 @@ bool Archivos::existeRuta(string ruta) {
 string Archivos::leerLinea(){
     string dato;
     getline(archivo,dato);
-    return(dato);
+    return dato;
 }
