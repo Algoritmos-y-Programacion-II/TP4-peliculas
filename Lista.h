@@ -43,6 +43,10 @@ public:
     // POST: Saca el elemento de la posicion recibida como parametro de la lista
     void sacar(int posicion);
 
+    // PRE: El dato tiene que ser valido
+    // POST: Devuelve true si se encontro el dato en la lista, de lo contrario false
+    bool datoEnLista(Tipo dato);
+
     // PRE: -
     // POST: Devuelve true si la lista esta vacia, de lo contrario false
     bool vacia();
@@ -91,11 +95,6 @@ Nodo<Tipo>* Lista<Tipo>:: obtenerNodo(int posicion) {
 // -------------------->
 
 template <typename Tipo>
-bool Lista<Tipo>:: vacia() {
-    return primero == 0;
-}
-
-template <typename Tipo>
 void Lista<Tipo>:: agregarAlFinal(Tipo datoExterno) {
     if (elementos == 0)
         agregarEnPosicion(datoExterno, elementos);
@@ -139,5 +138,23 @@ void Lista<Tipo>:: sacar(int posicion) {
     }
     delete borrar;
     elementos--;
+}
+
+template <typename Tipo>
+bool Lista<Tipo>:: datoEnLista(Tipo datoExterno) {
+    bool encontrado = false;
+    int i = 0;
+    while((i < elementos) && !encontrado){
+        if(datoExterno == obtenerDato(i)){
+            encontrado = true;
+        }
+        i++;
+    }
+    return encontrado;
+}
+
+template <typename Tipo>
+bool Lista<Tipo>:: vacia() {
+    return primero == 0;
 }
 #endif //TP4_RECOMENDACIONPELICULA_LISTA_H
