@@ -6,9 +6,9 @@
 
 #ifndef CARGADORDEPELICULAS_H
 #define CARGADORDEPELICULAS_H
-#include"Archivos.h"
-#include"Lista.h"
-#include"Pelicula.h"
+#include "Archivos.h"
+#include "Lista.h"
+#include "Pelicula.h"
 
 using namespace std;
 class CargadorDePeliculas
@@ -36,15 +36,12 @@ class CargadorDePeliculas
         //POST: Vacia todas las listas de actores de cada elemento de la lista
         //void CargadorDePeliculas::VaciarActores(Lista<*Pelicula> &cartelera)
 
-    protected:
-
     private:
 
         //4)
         // PRE: Deven Proporcionarse un archivo y Lista validos como argumentos
         // POST: Carga La sublista "Actores" dentro de peli a partir de un unico string
-        void cargarListaDeActores(string lectura,Pelicula *&peli);
-
+        void cargarListaDeActores(string actores,Pelicula *&peli);
 
        /*Atributos*/
         Archivos arch;
