@@ -1,62 +1,66 @@
+
 #include"Archivos.h"
 
-Archivos::Archivos(){
-    abierto = false;
+/*1)*/Archivos::Archivos(){
+    //ctor sin patamentros
+        abierto=false;
+
 }
 
-Archivos::Archivos(string camino){
+/*2)*/Archivos::Archivos(string camino){
+    //ctor
     abrirArchivo(string camino);
-    if(this->archivo.good())
-        abierto = true;
+    if(this->archivo.good()){
+        abierto=true;
+    }else{
+        abierto=false;
+    }
 
-    else
-        abierto = false;
 }
 
-Archivos::~Archivos(){
-    if(abierto)
+/*3)*/Archivos::~Archivos(){
+    //dtor
+    if(this->estaAbierto()){
         this->cerrarArchivo();
+    }
 }
 
-void Archivos::abrirArchivo(string camino){
+/*4)*/void Archivos::abrirArchivo(string camino){
 
     try{
-        // Primero me fijo ya esta abierto, y en ese caso lanzo la excepcion
-        if(this->abierto)
-            throw abierto;
-
-        // Si no esta abierto, lo abro
         archivo.open(camino);
-        abierto = true;
-
-        // Si no se pudo abrir, lanzo la excepcion
-        if(archivo.fail()){
-            abierto = false;
+        if(this->abierto){
             throw abierto;
         }
-    }
-    catch(bool &e){
-        if(e)
-            cout<<"\t-- AVISO -- Ya hay un archivo abierto\n";
-        else
-            cout<<"\t -- AVISO-- No se pudo abrir la ruta del archivo\n";
+        abierto=true;
+        if(archivo.fail()){
+            abierto=false;
+            throw abierto;
+        }
+    }catch(bool &e){
+
+        if(e){
+            cout<<"Ya hay un archivo abierto! "<<endl;
+        }else{
+            cout<<"Archivo invalido "<<endl;
+        }
     }
 }
 
-void Archivos::cerrarArchivo(){
+/*5)*/void Archivos::cerrarArchivo(){
     archivo.close();
-    abierto = false;
+    abierto=false;
 }
 
-bool Archivos::estaAbierto(){
+/*6)*/bool Archivos::estaAbierto(){
     return abierto;
 }
 
-void Archivos::finalArchivo(){
+/*7)*/bool Archivos::finalArchivo(){
     return(archivo.eof());
 }
 
-string Archivos::leerLinea(){
+/*8)*/string Archivos::leerLinea(){
     string dato;
     getline(archivo,dato);
     return(dato);
