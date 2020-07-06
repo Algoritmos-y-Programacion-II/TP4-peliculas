@@ -1,19 +1,15 @@
-//
-// Created by root-MKevin on 28/6/20.
 // Los metodos se encuentran ordenados alfabeticamente sin distincion del tipo que sea.
 // Si hubiese un constructor y/o un destructor se encuentran al principio y al final, respectivamente.
 
 #include "PeliculasRecomendadas.h"
 
 PeliculasRecomendadas::PeliculasRecomendadas(){
-
-    cargador.cargar(ARCHIVO_VISTAS, peliculasVistas);
-    cargador.cargar(ARCHIVO_NO_VISTAS, peliculasNoVistas);
-    if (peliculasNoVistas.obtenerCantidadElementos == 0) {
-        liberarMemoria();
-        std::cout << "NO HAY PELICULAS SIN VER. FIN DE PROGRAMA" << std::endl;
+    if (!cargador.existePeliculasNoVistas()) {
+        std::cout << "\t-- AVISO -- No se pudo abrir el archivo \"" << ARCHIVO_NO_VISTAS << "\"" << std::endl;
         exit(1);
-        }
+    }
+    cargador.cargar(ARCHIVO_NO_VISTAS, peliculasNoVistas);
+    cargador.cargar(ARCHIVO_VISTAS, peliculasVistas);
 }
 
 bool PeliculasRecomendadas::actorEncontrado(Pelicula *peliculaLeida, Lista<string> *actoresVistos){
@@ -136,7 +132,7 @@ void PeliculasRecomendadas::liberarMemoria(){
 
 void PeliculasRecomendadas::mostrarPeliculasVistas(){
     for(int i=0; i < peliculasVistas.obtenerCantidadElementos(); i++){
-        peliculasVistas.obtenerDato(i)->imprimirDatosPelcula());
+        peliculasVistas.obtenerDato(i)->imprimirDatosPelicula();
     }
 }
 
