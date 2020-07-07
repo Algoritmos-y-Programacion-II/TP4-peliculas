@@ -4,7 +4,7 @@
 #include "PeliculasRecomendadas.h"
 
 PeliculasRecomendadas::PeliculasRecomendadas(){
-    if (!cargador.existePeliculasNoVistas()) {
+    if (!cargador.existeRuta(ARCHIVO_NO_VISTAS)) {
         std::cout << "\t-- AVISO -- No se pudo abrir el archivo \"" << ARCHIVO_NO_VISTAS << "\"" << std::endl;
         exit(1);
     }

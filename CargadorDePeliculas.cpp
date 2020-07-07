@@ -69,7 +69,7 @@
 }
 
 /*3)*/
-bool CargadorDePeliculas::existePeliculasNoVistas(string ruta) {
+bool CargadorDePeliculas::existeRuta(string ruta) {
     return arch.existeRuta(ruta);
 }
 
