@@ -39,7 +39,7 @@
 
         cartelera.agregarAlFinal(peli);
      }
-     cargas++;
+     arch.cerrarArchivo();
 }
 
 /*2)*/void CargadorDePeliculas::cargarListaDeActores(string actores,Pelicula *&peli){
@@ -52,11 +52,11 @@
     string actor;
     char caracter;
 
-    for (int contador = 0; contador < lectura.length(); contador++) {
+    for (int contador = 0; contador < actores.length(); contador++) {
 
         caracter = actores[contador];
-        if ((indice != ' ') && (indice != '\000')) {
-            actor+=indice;
+        if ((caracter != ' ') && (caracter != '\000')) {
+            actor+=caracter;
         }
         else {
             peli->cargarActor(actor);
@@ -67,8 +67,8 @@
 }
 
 /*3)*/
-bool CargadorDePeliculas::existePeliculasNoVistas() {
-    return arch.existeRuta(PELICULAS_NO_VISTAS);
+bool CargadorDePeliculas::existePeliculasNoVistas(string ruta) {
+    return arch.existeRuta(ruta);
 }
 
 /*4)*//*
