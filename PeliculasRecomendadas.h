@@ -1,5 +1,3 @@
-//
-// Created by root-MKevin on 28/6/20.
 // Los metodos se encuentran ordenados por el tipo (Modificador, Consultor, etc.)
 // y ademas, dentro de cada tipo, ordenados alfabeticamente.
 
@@ -98,7 +96,9 @@ class PeliculasRecomendadas {
         // METODOS
 
         // CONSTRUCTOR
-
+        //PRE: -
+        //POST: Si peliculasNoVistas.txt existe, carga las listas de peliculas vistas y no vistas
+        //      De lo contrario finaliza la ejecucion del programa
         PeliculasRecomendadas();
 
         // CONSULTORES
