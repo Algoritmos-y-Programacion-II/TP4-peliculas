@@ -22,7 +22,7 @@ class CargadorDePeliculas
         //3)
         // PRE: -
         // POST: Si existe el archivo de peliculas no vistas devuelve true, de lo contrario false
-        bool existePeliculasNoVistas();
+        bool existePeliculasNoVistas(string ruta);
         //4)
         //PRE: La lista debe estar cargada
         //POST: Vacia todas las listas de actores de cada elemento de la lista
