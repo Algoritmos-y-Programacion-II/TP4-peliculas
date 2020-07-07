@@ -10,6 +10,9 @@ void Menu::mostrarMenu(){
     cout << "\t4. Salir\n";
     cout << "\tIngrese el numero de la opcion que desea seleccionar: ";
     cin >> opcion;
+    //sin una validacion de la variable opcion, por como esta implementado en el main, si el 
+    //usuario ingresa por error o negligencia un caracter distinto de un numero, el metodo selector de opciones
+    //nunca corta la iteración.
 
 }
 
