@@ -38,6 +38,8 @@
         cargarListaDeActores(lectura, peli);
 
         cartelera.agregarAlFinal(peli);
+        
+        lectura=arch.leerLinea();
      }
      arch.cerrarArchivo();
 }
