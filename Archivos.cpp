@@ -6,7 +6,7 @@ Archivos::Archivos(){
 }
 
 Archivos::Archivos(string camino){
-    abrirArchivo(string camino);
+    abrirArchivo(camino);
 }
 
 Archivos::~Archivos(){
