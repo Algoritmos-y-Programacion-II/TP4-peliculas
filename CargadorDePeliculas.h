@@ -18,7 +18,7 @@ class CargadorDePeliculas
         //1)
         // PRE: Deben proporcionarse un string y lista validos como argumentos
         // POST: Setea el numero de peliculas cargadas en 0 (numeroPelicula)
-        void cargar(string camino,Lista<*Pelicula> &cartelera);
+        void cargar(string camino,Lista<Pelicula*> &cartelera);
         //3)
         // PRE: -
         // POST: Si existe el archivo de peliculas no vistas devuelve true, de lo contrario false
