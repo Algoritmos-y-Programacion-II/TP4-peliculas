@@ -26,7 +26,7 @@
 
         //Carga Puntuacion
         lectura=arch.leerLinea();
-        puntuacion=stoi(lectura);
+        puntuacion=atoi(lectura.c_str());
         peli->cargarPuntaje(puntuacion);
 
         //Carga en Director
