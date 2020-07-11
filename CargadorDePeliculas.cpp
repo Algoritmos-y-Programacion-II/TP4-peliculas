@@ -54,7 +54,7 @@
     string actor;
     char caracter;
 
-    for (int contador = 0; contador < actores.length(); contador++) {
+    for (unsigned int contador = 0; contador < actores.length(); contador++) {
 
         caracter = actores[contador];
         if ((caracter != ' ') && (caracter != '\000')) {
