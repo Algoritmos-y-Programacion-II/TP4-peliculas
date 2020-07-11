@@ -133,12 +133,14 @@ void PeliculasRecomendadas::liberarMemoria(){
 void PeliculasRecomendadas::mostrarPeliculasVistas(){
     for(int i=0; i < peliculasVistas.obtenerCantidadElementos(); i++){
         peliculasVistas.obtenerDato(i)->imprimirDatosPelicula();
+        cout << "\n";
     }
 }
 
 void PeliculasRecomendadas::mostrarPeliculasNoVistas(){
     for(int i = 0; i < peliculasNoVistas.obtenerCantidadElementos(); i++){
         peliculasNoVistas.obtenerDato(i)->imprimirDatosPelicula();
+        cout << "\n";
     }
 }
 
@@ -146,6 +148,7 @@ void PeliculasRecomendadas::mostrarPeliculasRecomendadas(){
     crearPeliculasRecomendadas();
     for(int i=0; i< peliculasRecomendadas.obtenerCantidadElementos(); i++){
         peliculasRecomendadas.obtenerDato(i)->imprimirDatosPelicula();
+        cout << "\n";
     }
 }
 
