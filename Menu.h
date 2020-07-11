@@ -9,7 +9,7 @@ class Menu{
 
 private:
     PeliculasRecomendadas peliculasRecomendadas;
-    int opcion;
+    char opcion;
 
 public:
 
