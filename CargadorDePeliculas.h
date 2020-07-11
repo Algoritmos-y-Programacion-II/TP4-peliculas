@@ -16,22 +16,18 @@ class CargadorDePeliculas
     public:
         /*Metodos*/
         //1)
-        // PRE: Deben proporcionarse un string y lista validos como argumentos
+        // PRE: -
         // POST: Setea el numero de peliculas cargadas en 0 (numeroPelicula)
         void cargar(string camino,Lista<Pelicula*> &cartelera);
         //3)
         // PRE: -
         // POST: Si existe el archivo de peliculas no vistas devuelve true, de lo contrario false
         bool existeRuta(string ruta);
-        //4)
-        //PRE: La lista debe estar cargada
-        //POST: Vacia todas las listas de actores de cada elemento de la lista
-        //void CargadorDePeliculas::vaciarActores(Lista<Pelicula*> &cartelera)
 
     private:
 
         //2)
-        // PRE: Deben proporcionarse un string y puntero a pelicula validos como argumentos
+        // PRE: -
         // POST: Carga la sublista de actores en la pelicula
         void cargarListaDeActores(string actores, Pelicula *&peli);
 

@@ -14,13 +14,13 @@ private:
 public:
 
     //Mostrar las opciones que el usuario puede elegir
-    //Pre-Condicion: Debe instanciarse un menu y pasar las listas por parametro
+    //Pre-Condicion: -
     //Post-Condicion: Imprime por pantalla las decisiones que tiene el usuario
     void mostrarMenu();
 
     //Procesa la opcion del usuario
-    //Pre-Condicion: Debe existir un objeto instanciado Menu y la opcion debe estar entre el rango 1 y el 3
-    //Post-Condicion: procesa la opcion invocando las funciones correspondientes
+    //Pre-Condicion: -
+    //Post-Condicion: Procesa la opcion invocando las funciones correspondientes
     bool selectorDeOpciones();
 };
 #endif //PELICULAS_MENU_H

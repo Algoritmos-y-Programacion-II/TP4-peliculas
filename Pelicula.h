@@ -1,12 +1,3 @@
-//
-// Created by root-MKevin on 28/6/20.
-//
-// Los atributos estan ordenados por tipo y alfabeticamente. Los metodos estan ordenados segun su
-// "clasificacion" (Constructor, consultor, etc.) y dentro de cada clasificacion, tambien
-// ordenados alfabeticamente.
-// NOTA: Los parametros de un metodo podrian estar ordenados segun la forma del archivo peliculas.
-
-
 #ifndef PELICULA_H
 #define PELICULA_H
 
@@ -39,55 +30,55 @@ class Pelicula {
 
         // CONSTRUCTORES
 
-        //PRE: NO RECIBE NADA.
+        //PRE: -
         //POST: CONSTRUYE UNA PELICULA CON SUS ATRIBUTOS EN CERO Y VACIO SEGUN CORRESPONDA.
         Pelicula();
 
         // MODIFICADORES
 
-        //PRE: RECIBE UN STRING.
+        //PRE: -.
         //POST: NO DEVUELVE NADA. LO CARGA EN LA LISTA DE ACTORES.
         void cargarActor(string actorRecibido);
 
-        //PRE: RECIBE UN STRING.
+        //PRE: -
         //POST: NO DEVUELVE NADA. LE ASIGNA EL VALOR AL ATRIBUTO DIRECTOR.
         void cargarDirector(string directorRecibido);
 
-        //PRE: RECIBE UN STRING.
+        //PRE: -
         //POST: NO DEVUELVE NADA. LE ASIGNA EL VALOR AL ATRIBUTO GENERO.
         void cargarGenero(string generoRecibido);
 
-        //PRE: RECIBE UN ENTERO VALIDO. 0 <= puntajeRecibido <= 10;
+        //PRE: 0 <= puntajeRecibido <= 10;
         //POST: NO DEVUELVE NADA. LE ASIGNA EL VALOR AL ATRIBUTO PUNTAJE.
         void cargarPuntaje(int puntajeRecibido);
 
-        //PRE: RECIBE UN STRING.
+        //PRE: -
         //POST: NO DEVUELVE NADA. LE ASIGNA EL VALOR AL ATRIBUTO TITULO.
         void cargarTitulo(string tituloRecibido);
 
         // CONSULTORES
 
-        //PRE: NO RECIBE NADA.
+        //PRE: -
         //POST: IMPRIME LOS ATRIBUTOS DE LA PELICULA.
         void imprimirDatosPelicula();
 
-        //PRE: NO RECIBE NADA.
+        //PRE: -
         //POST: DEVUELVE UN PUNTERO DE TIPO LISTA, ESPECIFICAMENTE, DIRECCIONADO A LA LISTA ACTORES.
         Lista<string> *obtenerActores();
 
-        //PRE: NO RECIBE NADA.
+        //PRE: -
         //POST: DEVUELVE EL STRING ALMACENADO EN EL ATRIBUTO GENERO.
         string obtenerGenero();
 
-        //PRE: NO RECIBE NADA.
+        //PRE: -
         //POST: DEVUELVE EL STRING ALMACENADO EN EL ATRIBUTO DIRECTOR.
         string obtenerDirector();
 
-        //PRE: NO RECIBE NADA.
+        //PRE: -
         //POST: DEVUELVE EL STRING ALMACENADO EN EL ATRIBUTO PUNTAJE.
         int obtenerPuntaje();
 
-        //PRE: NO RECIBE NADA.
+        //PRE: -
         //POST: DEVUELVE EL STRING ALMACENADO EN EL ATRIBUTO TITULO.
         string obtenerTitulo();
 };

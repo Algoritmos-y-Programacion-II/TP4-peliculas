@@ -26,36 +26,34 @@ class PeliculasRecomendadas {
 
         // MODIFICADORES
 
-        //PRE: RECIBE UN PUNTERO DE TIPO PELICULA Y UNA LISTA DE STRINGS (PUEDE TENER O NO TENER DATOS).
+        //PRE: -
         //POST: NO DEVUELVE NADA. SI LA LISTA ESTA VACIA, CARGA TODOS LOS ACTORES. SI YA TIENE DATOS CARGADOS
         //      COMPARA LOS DATOS PARA NO CARGAR UN DATO EXISTENTE.
         void cargarActoresLista(Pelicula *peliculaVista, Lista<string> *actoresVistos);
 
-        //PRE: AMBOS PARAMETROS TIENEN QUE SER PUNTEROS DE TIPO PELICULA VALIDOS
+        //PRE: -
         //POST: CARGA LA LISTA DE ACTORES DE LA PELICULA LEIDA, EN LA RECOMENDADA
         void cargarActoresPelicula(Pelicula *&peliculaLeida, Pelicula *&peliculaRecomendada);
 
-        //PRE: AMBOS PARAMETROS TIENEN QUE SER PUNTEROS DE TIPO PELICULA VALIDOS
+        //PRE: -
         //POST: CARGA LOS DATOS DE LA PELICULA LEIDA, EN LA RECOMENDADA
         void cargarDatosPelicula(Pelicula *&peliculaLeida, Pelicula *&peliculaRecomendada);
 
-        //PRE: RECIBE UN PUNTERO DE TIPO PELICULA Y UNA LISTA DE STRINGS PREVIAMENTE CARGADA.
+        //PRE: LA LISTA DE STRINGS DEBE ESTAR PREVIAMENTE CARGADA.
         //POST: NO DEVUELVE NADA. SI EL DIRECTOR DE LA PELICULA ESTA EN LA LISTA NO HACE NADA,
         //      DE LO CONTRARIO, LO CARGA.
         void cargarDirector(Pelicula *peliculaVista, Lista<string> *directoresVistos);
 
-        //PRE: RECIBE UN PUNTERO DE TIPO PELICULA Y UNA LISTA DE STRINGS PREVIAMENTE CARGADA.
+        //PRE: LA LISTA DE STRINGS DEBE ESTAR PREVIAMENTE CARGADA.
         //POST: NO DEVUELVE NADA. SI EL GENERO DE LA PELICULA ESTA EN LA LISTA NO HACE NADA,
         //      DE LO CONTRARIO, LO CARGA.
         void cargarGenero(Pelicula *peliculaVista, Lista<string> *generosVistos);
 
-        //PRE: RECIBE UN PUNTERO DE TIPO LISTA, DE TIPO PELICULA, Y TRES PUNTEROS DE TIPO LISTA, DE TIPO STRING.
-        //     LA LISTA DE TIPO PELICULAS DEBE ESTAR PREVIAMENTE CARGADA. LAS OTRAS DEBEN ESTAR VACIAS.
+        //PRE: LA LISTA DE TIPO PELICULAS DEBE ESTAR PREVIAMENTE CARGADA. LAS OTRAS DEBEN ESTAR VACIAS.
         //POST: NO DEVUELVE NADA. CARGA LOS DATOS CORRESPONDIENTES EN CADA UNA DE LAS LISTAS.
-        void cargarListasAuxiliares(Lista<string> *generosVistos, Lista<string> *directoresVistos,
-                Lista<string> *actoresVistos);
+        void cargarListasAuxiliares(Lista<string> *generosVistos, Lista<string> *directoresVistos, Lista<string> *actoresVistos);
 
-        //PRE: RECIBE LA REFERENCIA DE UN PUNTERO DE TIPO PELICULA VALIDO
+        //PRE: -
         //POST: CARGA LA PELICULA EN LA LISTA DE RECOMENDADAS
         void cargarPelicula(Pelicula *&peliculaLeida);
 
@@ -68,18 +66,18 @@ class PeliculasRecomendadas {
         //POST: LIBERA LOS RECURSOS UTILIZADOS
         void liberarMemoria();
 
-        //PRE: RECIBE UN PUNTERO DE TIPO LISTA DE PELICULA, EN PARTICULAR LAS NO VISTAS, PREVIAMENTE CARGADA.
+        //PRE: LA LISTA DE PELICULAS NO VISTAS DEBE ESTAR CARGADA
         //POST: GENERA UNA NUEVA LISTA DE PELICULAS RECOMENDADAS A PARTIR DE PELICULAS CON PUNTAJE MAYOR O IGUAL A 7.
         void recomendarPorPuntaje();
 
-        //PRE: RECIBE DOS PUNTERO DE TIPO LISTA DE PELICULA, PREVIAMENTE CARGADAS.
+        //PRE: LAS LISTAS DE PELICULAS VISTAS Y NO VISTAS DEBEN ESTAR CARGADAS
         //POST: GENERA UNA NUEVA LISTA DE PELICULAS RECOMENDADAS, EN FUNCION DEL GENERO Y DIRECTOR/ACTORES QUE
         //      PARTICIPAN O DE UN PUNTAJE MAYOR O IGUAL A 7.
         void recomendarPeliculas();
 
         // CONSULTORES
 
-        //PRE: RECIBE UNA PUNTERO DE TIPO PELICULA Y UNA LISTA DE STRING PREVIAMENTE CARGADA.
+        //PRE: LA LISTA DE STRING DEBE ESTAR PREVIAMENTE CARGADA.
         //POST: DEVUELVE TRUE SI EL ACTOR ESTA EN LA LISTA, FALSE DE LO CONTRARIO.
         bool actorEncontrado(Pelicula *peliculaLeida, Lista<string> *actoresVistos);
 
@@ -87,7 +85,7 @@ class PeliculasRecomendadas {
         //POST: MUESTRA POR PANTALLA LOS ACTORES
         void imprimirActores(Lista<string> *actores);
 
-        //PRE: LA PELICULA TIENE QUE SER VALIDA
+        //PRE: -
         //POST: MUESTRA POR PANTALLA LA INFORMACION DE LA PELICULA
         void imprimirDatosPelicula(Pelicula* peliculaLeida);
 

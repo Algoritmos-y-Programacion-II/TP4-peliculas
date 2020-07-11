@@ -12,15 +12,15 @@ private:
 
 public:
 
-    // PRE: datoExterno debe ser valido
+    // PRE: -
     // POST: Construye un nodo con el dato recibido
     Nodo(Tipo datoExterno);
 
-    // PRE: pSigExterno debe ser valido
+    // PRE: -
     // POST: Le asigna pSigExterno a pSig
     void asignarSiguiente(Nodo* pSigExterno);
 
-    // PRE: datoExterno debe ser valido
+    // PRE: -
     // POST: Le asigna datoExterno a dato
     void asignarDato(Tipo datoExterno);
 

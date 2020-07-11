@@ -27,15 +27,15 @@ public:
     // POST: Devuelve la cantidad de elementos
     int obtenerCantidadElementos();
 
-    // PRE: datoExterno debe ser valido, y 0 < posicion <= elementos
+    // PRE: 0 < posicion <= elementos
     // POST: Agrega el dato recibido como parametro en la posicion recibida como parametro
     void agregarEnPosicion(Tipo datoExterno, int posicionExterno);
 
-    // PRE: datoExterno debe ser valido
+    // PRE: -
     // POST: Agrega el dato recibido como parametro al final de la lista
     void agregarAlFinal(Tipo datoExterno);
 
-    // PRE: datoExterno debe ser valido
+    // PRE: -
     // POST: Agrega el dato recibido como parametro al principio de la lista
     void agregarAlPrincipio(Tipo datoExterno);
 
@@ -43,7 +43,7 @@ public:
     // POST: Saca el elemento de la posicion recibida como parametro de la lista
     void sacar(int posicion);
 
-    // PRE: El dato tiene que ser valido
+    // PRE: -
     // POST: Devuelve true si se encontro el dato en la lista, de lo contrario false
     bool datoEnLista(Tipo dato);
 
