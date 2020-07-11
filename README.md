@@ -2,9 +2,18 @@
 ================
 Trabajo Practico Grupal N4: Recomendación de Películas
 ------------
-La finalidad de este proyecto es recomendarle al usuario que película ver en base a las pelícualas que vio y no vio.
+La finalidad de este proyecto es recomendarle al usuario qué película ver en base a las películas que vio y no vio.
 
-Hecho con C++.
+Hecho por:
+
+  - [Morgan Fossati](https://github.com/MorganIvan)
+  - [Patricio Rodriguez](https://github.com/LHFPSystem)
+  - [Kevin Meaca](https://github.com/root-MKevin)
+  - [Valentina Varela Rodriguez](https://github.com/valva-ro)
+
+UML
+------------
+Para ver el diagrama UML haga click [acá](https://app.lucidchart.com/documents/view/3449b957-8e6d-49e4-85ff-a5bf505d5faa/0_0)
 
 Instalación
 ------------
@@ -25,14 +34,18 @@ Instalación
 	- Linux 
 	
 	      sudo apt-get update
-		  sudo apt-get install git
-		    
+	      sudo apt-get install git
+		  
 	- Windows [Descargar Git](https://git-scm.com/downloads)
 
-- Desde la terminal vaya a la ubicacion en donde desea tener el proyecto, y clonelo con `git clone https://github.com/valva-ro/TP4-recomendacionPelicula` 
+- Desde la terminal vaya a la ubicacion en donde desea tener el proyecto, y clonelo con 
 
-Contribución
-----------
+    `git clone https://github.com/valva-ro/TP4-recomendacionPelicula` 
 
-- [Issue Tracker](https://github.com/valva-ro/TP4-recomendacionPelicula/issues)
-- [Source Code](https://github.com/valva-ro/TP4-recomendacionPelicula)
+- Compile el programa con `g++ *.cpp -o ejecutable`
+
+- Asegurese de tener en el mismo directorio donde tiene el ejecutable el archivo `peliculasNoVistas.txt`
+
+- Corra el programa
+    - Linux `./ejecutable`
+    - Windows `ejecutable`
